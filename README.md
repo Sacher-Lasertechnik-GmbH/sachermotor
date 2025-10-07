@@ -36,7 +36,7 @@ During installation, you will be asked to provide the required but not included 
 
 ## Key Methods
 
-### 🧩 Connection
+### Connection
 
 #### `connect(usb)`
 Tries to establish a connection to the EPOS.
@@ -52,7 +52,7 @@ Disconnects from the motor and saves parameters.
 
 ---
 
-### ⚙️ Configuration
+### Configuration
 
 #### `setVelocityParameter(velocity, acceleration, deceleration)`
 Converts the given parameters from nm/s to revolutions per minute (rpm) and nm/s² to rpm/s,  
@@ -73,7 +73,7 @@ Returns velocity, acceleration, and deceleration in nm/s or nm/s².
 
 ---
 
-### 🔘 Trigger
+### Trigger
 
 #### `triggerParameter(intervalWidth)`
 Sets the parameters for the Position Compare Trigger.
@@ -86,7 +86,7 @@ Reverses the digital output for the Motion Trigger.
 
 ---
 
-### 🎛 Movement
+### Movement
 
 #### `moveToWavelength(wavelength, highPrecision, trigger)`
 Moves the motor to a given wavelength.
@@ -126,7 +126,7 @@ Stops the current motor movement.
 
 ---
 
-### 📊 Status
+### Status
 
 #### `getWavelengthMinMax()`
 Returns an array with `[Minimum Wavelength, Maximum Wavelength]`.
@@ -145,7 +145,7 @@ Returns the current wavelength.
 
 ---
 
-### 🧾 Support
+### Support
 
 #### `generateSupportData()`
 Generates a support `.txt` file to be sent to us for technical support.
