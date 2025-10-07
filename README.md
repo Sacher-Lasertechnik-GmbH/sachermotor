@@ -182,9 +182,9 @@ Full example scripts are available in the [`examples/`](./examples) folder:
 
 | Example | Description |
 |---------|-------------|
-| `example_1_basic_motion.py` | Basic connection, velocity setup, step movements, move to center wavelength. |
-| `example_2_trigger_scan.py` | Stepwise wavelength scan using Movement Trigger with high precision. |
-| `example_3_position_trigger.py` | Use Position Compare Trigger to generate pulses every 0.1 nm during motion. |
+| `exampleCode_1.py` | Basic connection, velocity setup, step movements, move to center wavelength. |
+| `exampleCode_2.py` | Stepwise wavelength scan using Movement Trigger with high precision. |
+| `exampleCode_3.py` | Use Position Compare Trigger to generate pulses every 0.1 nm during motion. |
 
 
 ---
