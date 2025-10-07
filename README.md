@@ -12,7 +12,9 @@ If the DLL is not found, a dialog window will appear asking for its location.
 1. Download the appropriate `.whl` or `.pyd` file for your Python version.
 2. Install using pip:
 
-    pip install sachermotor-1.0.0-cp<pythonversion>-cp<pythonversion>-win_amd64.whl
+    pip install sachermotor-1.0.0-cp310-cp310-win_amd64.whl
+
+   example for Python 3.10
 
    or copy the `.pyd` file directly into your project directory.
 
@@ -20,10 +22,32 @@ If the DLL is not found, a dialog window will appear asking for its location.
 
 ---
 
-## Usage
+## Quick Start
 
-Please refer to the example scripts provided in this repository for usage patterns.
-These scripts demonstrate connecting to the motor, setting velocity parameters, moving to a wavelength, and other common operations.
+### Description
+
+Connect to your Sacher motor and move to the center wavelength of your system’s range.
+
+```python
+from sachermotor import motor
+# Import class Motor from SacherMotorControl
+
+MC = motor()
+# Create an instance of the motor class
+
+MC.connect("USB0")
+# Connects the motor
+
+# Get wavelength limits and calculate the center wavelength
+minWl, maxWl = MC.getWavelengthMinMax()
+centerWl = (maxWl - minWl) / 2 + minWl
+
+# Move to the center wavelength
+MC.moveToWavelength(centerWl)
+
+# Disconnect the motor
+MC.disconnect()
+```
 
 ---
 
@@ -149,6 +173,18 @@ Returns the current wavelength.
 
 #### `generateSupportData()`
 Generates a support `.txt` file to be sent to us for technical support.
+
+---
+
+## Examples
+
+Full example scripts are available in the [`examples/`](./examples) folder:
+
+| Example | Description |
+|---------|-------------|
+| `example_1_basic_motion.py` | Basic connection, velocity setup, step movements, move to center wavelength. |
+| `example_2_trigger_scan.py` | Stepwise wavelength scan using Movement Trigger with high precision. |
+| `example_3_position_trigger.py` | Use Position Compare Trigger to generate pulses every 0.1 nm during motion. |
 
 
 ---
