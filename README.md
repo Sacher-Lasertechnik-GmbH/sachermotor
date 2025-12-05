@@ -2,8 +2,10 @@
 
 **sachermotor** is a Python module for controlling Sacher laser systems.
 
-Important: The module requires **EposCMD64.dll**, which must be downloaded separately from Maxon ([https://www.maxongroup.com/](https://www.maxongroup.com/medias/sys_master/root/9443687104542/EPOS-Windows-DLL-En.zip)).
+Important: The module requires **EposCMD64.dll**, which must be downloaded separately from Maxon ([EposCMD64.dll Download](https://www.maxongroup.com/medias/sys_master/root/9443687104542/EPOS-Windows-DLL-En.zip)).
 If the DLL is not found, a dialog window will appear asking for its location.
+
+You can find the required USB driver also on the Maxon website ([USB Drivers Download](https://www.maxongroup.com/medias/sys_master/root/8837358583838/EPOS-USB-Driver-Installation-En.zip))
 
 ---
 
